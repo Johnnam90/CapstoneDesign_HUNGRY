@@ -1,4 +1,4 @@
-package com.bac.posting;
+package common.hungry.comment;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.bac.posting.PostingDao;
+import common.hungry.comment.CommentDao;
 
-//import com.bac.posting.PostingDao;
+//import com.bac.comment.CommentDao;
 
-public class PostingServlet extends HttpServlet{
+public class CommentServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 
@@ -34,12 +34,10 @@ public class PostingServlet extends HttpServlet{
 		JSONObject JObject = new JSONObject();
 		//String type = request.getParameter("type");
 
-		PostingDao dao = new PostingDao();
+		CommentDao dao = new CommentDao();
 
 		try{
-			JObject.put("result", dao.getPosting());
-
-
+			JObject.put("result", dao.getComment());
 		}catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,30 +46,21 @@ public class PostingServlet extends HttpServlet{
 		printout.print(JObject);
 		printout.flush();
 	}
-
+	
+	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json; charset=UTF-8");//CREATE
 
 		PrintWriter printout = response.getWriter();
 		JSONObject JObject = new JSONObject();
-		String type=request.getParameter("type");
 
-		PostingDao dao = new PostingDao();
+		CommentDao dao = new CommentDao();
 		
+		Map<String, String[]> commentParam = request.getParameterMap();
 
 		
 		try{
-			if(type.equals("1")){
-				Map<String, String[]> postingParam = request.getParameterMap();
-			
-				JObject.put("result", dao.postPosting(postingParam));
-			}else if(type.equals("2")){
-				String seq=request.getParameter("seq");
-				String content=request.getParameter("content");
-				
-				JObject.put("result", dao.updatePosting(seq, content));
-				
-			}
+			JObject.put("result", dao.postComment(commentParam));
 		}catch(JSONException e){
 			
 			e.printStackTrace();
@@ -81,18 +70,18 @@ public class PostingServlet extends HttpServlet{
 	}
 
 	public void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("application/json; charset=UTF-8");//DELETE
+		response.setContentType("application/json; charset=UTF-8");//CREATE
 
 		PrintWriter printout = response.getWriter();
 		JSONObject JObject = new JSONObject();
 
-		PostingDao dao = new PostingDao();
+		CommentDao dao = new CommentDao();
 		
 		String seq = request.getParameter("seq");
 
 		
 		try{
-			JObject.put("result", dao.deletePosting(seq));
+			JObject.put("result", dao.deleteComment(seq));
 		}catch(JSONException e){
 			
 			e.printStackTrace();

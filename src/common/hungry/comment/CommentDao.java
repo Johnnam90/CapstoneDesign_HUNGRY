@@ -1,4 +1,4 @@
-package com.bac.comment;
+package common.hungry.comment;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
