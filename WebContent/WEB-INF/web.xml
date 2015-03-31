@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Study</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+ <!-- User -->
+  <servlet>
+    <servlet-name>getUser</servlet-name>            
+    <servlet-class>com.bac.user.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getUser</servlet-name>
+    <url-pattern>/getUser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>postUser</servlet-name>            
+    <servlet-class>com.bac.user.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>postUser</servlet-name>
+    <url-pattern>/postUser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>deleteUser</servlet-name>            
+    <servlet-class>com.bac.user.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteUser</servlet-name>
+    <url-pattern>/deleteUser</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Posting -->
+  <servlet>
+    <servlet-name>getPosting</servlet-name>            
+    <servlet-class>com.bac.posting.PostingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getPosting</servlet-name>
+    <url-pattern>/getPosting</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>postPosting</servlet-name>            
+    <servlet-class>com.bac.posting.PostingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>postPosting</servlet-name>
+    <url-pattern>/postPosting</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>deletePosting</servlet-name>            
+    <servlet-class>com.bac.posting.PostingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deletePosting</servlet-name>
+    <url-pattern>/deletePosting</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- Comment -->
+  <servlet>
+    <servlet-name>getComment</servlet-name>            
+    <servlet-class>com.bac.comment.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getComment</servlet-name>
+    <url-pattern>/getComment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>postComment</servlet-name>            
+    <servlet-class>com.bac.comment.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>postComment</servlet-name>
+    <url-pattern>/postComment</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>deleteComment</servlet-name>            
+    <servlet-class>com.bac.comment.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteComment</servlet-name>
+    <url-pattern>/deleteComment</url-pattern>
+  </servlet-mapping>   		
+</web-app>
