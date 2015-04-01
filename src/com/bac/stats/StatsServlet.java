@@ -1,4 +1,4 @@
-package common.hungry.stats;
+package com.bac.stats;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import common.hungry.posting.PostingDao;
+import com.bac.posting.PostingDao;
 
 //import com.bac.posting.PostingDao;
 

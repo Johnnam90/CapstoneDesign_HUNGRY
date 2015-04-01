@@ -1,4 +1,4 @@
-package common.hungry.stats;
+package com.bac.stats;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

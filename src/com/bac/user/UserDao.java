@@ -1,4 +1,4 @@
-package common.hungry.user;
+package com.bac.user;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,7 +16,6 @@ public class UserDao {
 
 	static final String USER = "root";
 	static final String PASS = "900418";
-	
 	/**
 	 * 커넥션 공동 메소드
 	 * @returna

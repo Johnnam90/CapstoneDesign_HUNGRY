@@ -13,8 +13,9 @@ $(function() {
 			dataType : 'json',
 			success : function(res){
 				commentDatas = res.result;
-				
+				console.log("ajax_getCommentDao");
 				renderPostingList();
+				
 			}
 		});
 	}
@@ -51,7 +52,7 @@ $(function() {
 							$('#user_edit_name').val(name);
 							$('#user_edit_pass').val(pass);
 							$('#user_edit_passconf').val('');
-
+							console.log("ajax_profileEdit");
 							alert('edit success');
 							$.modal.close();
 							$('.info').text(id + '('+name+')');
@@ -84,7 +85,7 @@ $(function() {
 						$('#user_edit_passconf').val('');
 
 						$.modal.close();
-
+						console.log("ajax_deleteUser");
 						window.sessionStorage.setItem('id', '');
 						window.sessionStorage.setItem('name','');
 						window.sessionStorage.setItem('thumb','');
@@ -126,7 +127,7 @@ $(function() {
 					window.sessionStorage.setItem('name',res.result.name);
 					window.sessionStorage.setItem('thumb',res.result.thumb);
 					window.sessionStorage.setItem('pass',res.result.pass);
-
+					console.log("ajax_logIn");
 					$('.logon').show();
 					$('.logoff').hide();
 
@@ -178,6 +179,7 @@ $(function() {
 					alert('Sorry. Id is already exist');
 					$('#user_signin_id').val('');
 					$('#user_signin_id').focus();
+					console.log("ajax_idCheck");
 					return false;
 				}
 				else{
@@ -192,6 +194,7 @@ $(function() {
 							$('#user_signin_pass').val('');
 							$('#user_signin_passconf').val('');
 							$.modal.close();
+							console.log("ajax_idCheck2");
 						},
 						error : function(){
 
@@ -232,6 +235,7 @@ $(function() {
 			success : function(res){
 				if(res.result == 'success'){
 					$('#write').val('');
+					console.log("ajax_wirtePosting");
 
 					//renew posting list
 					renderPostingList();
@@ -278,7 +282,7 @@ $(function() {
 					'</li>';
 					parentElem.find('ul.comment-list').append(commentItem);
 					handleRaty();
-					
+					console.log("ajax_commentPost");
 					
 					//count avg and update posting point
 					var avg = 2.5;
@@ -324,6 +328,7 @@ $(function() {
 			success : function(res){
 				postingDatas = res.result;
 				for(var i=0; i<5; i++ ){
+					console.log("ajax_renderPosting");
 					renderSectionElem();
 				}
 			}
@@ -376,6 +381,7 @@ $(function() {
 				dataType :'json',
 				success : function(res) {
 					renderPostingList();
+					console.log("ajax_postingDelete");
 				}
 			});
 		}else{return false;}
@@ -398,6 +404,7 @@ $(function() {
 					$('#post_edit_area').val('');
 					$.modal.close();
 					renderPostingList();
+					console.log("ajax_postingEdit");
 				}
 			});
 		});
@@ -414,6 +421,7 @@ $(function() {
                 type: 'POST',
                 success: function(result){
                     alert("업로드 성공!!");
+                    console.log("ajax_upload");
                 }
             });
          });

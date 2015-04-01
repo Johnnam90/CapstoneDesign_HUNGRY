@@ -13,6 +13,7 @@
 <script src="js/custom.js"></script>
 <script src="js/loginCheck.js"></script>
 <script src="js/view.js"></script>
+<script src="js/after.js"></script>
 <!-- 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script> -->
 
 <link rel="stylesheet"
@@ -82,7 +83,10 @@
 						<h1>Write Post</h1>
 						<textarea id="write"></textarea>
 						<div id="" class="">
-
+							<form id="postingimg" action="./img/postingimg" method="post">
+								<input type="file" name="upload_file" /> <input type="button"
+									id="uploadbutton" value="클릭">
+							</form>
 						</div>
 						<div id="write_post_btn" class="pure-button">Post</div>
 					</div>

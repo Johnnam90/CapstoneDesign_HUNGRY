@@ -1,4 +1,4 @@
-package common.hungry.comment;
+package com.bac.comment;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import common.hungry.comment.CommentDao;
+import com.bac.comment.CommentDao;
 
-import common.hungry.comment.CommentDao;
+//import com.bac.comment.CommentDao;
 
 public class CommentServlet extends HttpServlet{
 

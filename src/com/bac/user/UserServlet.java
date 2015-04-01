@@ -1,4 +1,4 @@
-package common.hungry.user;
+package com.bac.user;
 
 import java.io.IOException;
 import java.io.PrintWriter;
