@@ -157,7 +157,8 @@ public class PostingDao {
 		return result;
 	}
 	
-	public void postImg(){
-		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit,"euc-kr",  new DefaultFileRenamePolicy());
-	}
+//파일처리 
+//	public void postImg(){
+//		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit,"euc-kr",  new DefaultFileRenamePolicy());
+//	}
 }//end FirstExample
