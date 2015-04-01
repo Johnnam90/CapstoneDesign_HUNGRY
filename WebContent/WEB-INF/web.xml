@@ -11,7 +11,7 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>getUser</servlet-name>
-    <servlet-class>com.bac.user.UserServlet</servlet-class>
+    <servlet-class>common.hungry.user.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>getUser</servlet-name>
@@ -19,7 +19,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>postUser</servlet-name>
-    <servlet-class>com.bac.user.UserServlet</servlet-class>
+    <servlet-class>common.hungry.user.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>postUser</servlet-name>
@@ -27,7 +27,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>deleteUser</servlet-name>
-    <servlet-class>com.bac.user.UserServlet</servlet-class>
+    <servlet-class>common.hungry.user.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>deleteUser</servlet-name>
@@ -35,7 +35,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>getPosting</servlet-name>
-    <servlet-class>com.bac.posting.PostingServlet</servlet-class>
+    <servlet-class>common.hungry.posting.PostingServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>getPosting</servlet-name>
@@ -43,7 +43,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>postPosting</servlet-name>
-    <servlet-class>com.bac.posting.PostingServlet</servlet-class>
+    <servlet-class>common.hungry.posting.PostingServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>postPosting</servlet-name>
@@ -51,7 +51,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>deletePosting</servlet-name>
-    <servlet-class>com.bac.posting.PostingServlet</servlet-class>
+    <servlet-class>common.hungry.posting.PostingServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>deletePosting</servlet-name>
@@ -59,7 +59,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>getComment</servlet-name>
-    <servlet-class>com.bac.comment.CommentServlet</servlet-class>
+    <servlet-class>common.hungry.comment.CommentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>getComment</servlet-name>
@@ -67,7 +67,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>postComment</servlet-name>
-    <servlet-class>com.bac.comment.CommentServlet</servlet-class>
+    <servlet-class>common.hungry.comment.CommentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>postComment</servlet-name>
@@ -75,7 +75,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>deleteComment</servlet-name>
-    <servlet-class>com.bac.comment.CommentServlet</servlet-class>
+    <servlet-class>common.hungry.comment.CommentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>deleteComment</servlet-name>
