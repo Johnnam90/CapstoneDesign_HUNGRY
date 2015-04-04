@@ -4,13 +4,13 @@ $(function() {
 		id : window.sessionStorage.getItem('id'),
 		name : window.sessionStorage.getItem('name')
 	};
+	
 	var thumb = window.sessionStorage.getItem('thumb');
 	var pass = window.sessionStorage.getItem('pass');
 	
 	
 	if(!session.id){
-		
-		
+
 	}else{
 		$('.logon').show();
 		$('.logoff').hide();

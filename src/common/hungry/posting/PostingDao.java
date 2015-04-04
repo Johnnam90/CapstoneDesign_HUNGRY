@@ -11,8 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 public class PostingDao {
+//	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+//	static final String DB_URL = "jdbc:mysql://54.64.160.105/AYH";
+//	
+	
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	static final String DB_URL = "jdbc:mysql://localhost:3306/CD";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/AYH";
+
 
 	static final String USER = "root";
 	static final String PASS = "900418";
@@ -43,7 +48,12 @@ public class PostingDao {
 			conn = getConnection();
 			stmt = conn.createStatement();
 			
-			String sql ="Select * from posting";
+			String sql ="SELECT A.*, B.thumb, C.posting_seq, IFNULL(AVG(C.point), 2.5) AS avg "+
+					"FROM posting AS A "+
+					"LEFT OUTER JOIN user B ON B.id = A.writer "+ 
+					"LEFT OUTER JOIN comment C ON C.posting_seq = A.seq "+ 
+					"GROUP BY A.seq "+
+					"ORDER BY A.seq DESC";
 			ResultSet rs = stmt.executeQuery(sql);
 			
 			while(rs.next()){
@@ -157,8 +167,5 @@ public class PostingDao {
 		return result;
 	}
 	
-//파일처리 
-//	public void postImg(){
-//		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit,"euc-kr",  new DefaultFileRenamePolicy());
-//	}
-}//end FirstExample
+
+}
