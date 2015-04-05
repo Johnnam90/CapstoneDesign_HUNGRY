@@ -15,7 +15,7 @@ import org.json.JSONObject;
 
 import common.hungry.comment.CommentDao;
 
-//import com.bac.comment.CommentDao;
+
 
 public class CommentServlet extends HttpServlet{
 

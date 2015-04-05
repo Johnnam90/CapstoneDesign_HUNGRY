@@ -107,6 +107,8 @@ public class CommentDao {
 		return result;
 	}
 	
+	
+	
 	public String postComment(Map<String, String[]> commentParam){
 		Connection conn = null;
 		Statement stmt = null;
@@ -118,7 +120,7 @@ public class CommentDao {
 			stmt = conn.createStatement();
 			String sql= "INSERT INTO comment (posting_seq, content, writer, regdate, point) "+
 						"VALUES('"+commentParam.get("posting_seq")[0].toString()+"', '"+commentParam.get("content")[0].toString()+"', '"+commentParam.get("writer")[0].toString()+"', now(), '"+commentParam.get("point")[0].toString()+"')";
-
+   
 			stmt.executeUpdate(sql);
 
 			stmt.close();
