@@ -48,13 +48,19 @@ public class PostingDao {
 			conn = getConnection();
 			stmt = conn.createStatement();
 			
-			String sql ="SELECT A.*, B.thumb, C.posting_seq, IFNULL(AVG(C.point), 2.5) AS avg "+
-					"FROM posting AS A "+
-					"LEFT OUTER JOIN user B ON B.id = A.writer "+ 
-					"LEFT OUTER JOIN comment C ON C.posting_seq = A.seq "+ 
-					"GROUP BY A.seq "+
-					"ORDER BY A.seq DESC";
+			
+
+			
+			String sql ="SELECT * from posting";
 			ResultSet rs = stmt.executeQuery(sql);
+			
+			//TEST CODE!
+//			String sql ="SELECT A.*, B.thumb, C.posting_seq, IFNULL(AVG(C.point), 2.5) AS avg "+
+//					"FROM posting AS A "+
+//					"LEFT OUTER JOIN user B ON B.id = A.writer "+ 
+//					"LEFT OUTER JOIN comment C ON C.posting_seq = A.seq "+ 
+//					"GROUP BY A.seq "+
+//					"ORDER BY A.seq DESC";
 			
 			while(rs.next()){
 				HashMap<String, Object> item = new HashMap<String, Object>();
@@ -62,9 +68,7 @@ public class PostingDao {
 				item.put("content", rs.getString("content"));
 				item.put("writer", rs.getString("writer"));
 				item.put("regdate", rs.getString("regdate"));
-				//item.put("thumb", rs.getString("thumb"));
-				//item.put("avg", rs.getString("avg"));
-				
+
 				result.add(item);
 			}
 
